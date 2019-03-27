@@ -8,10 +8,24 @@ background-attachment: fixed;
 background-size:cover;
 background-position:center;
 }
-footer{
-position: relative;
-left: 0;
-bottom: 0;
-width: 100%;
-overflow: auto;
-}
+
+  * {
+    margin: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  .page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -100px; 
+  }
+  .page-wrap:after {
+    content: "";
+    display: block;
+  }
+  .page-footer, .page-wrap:after {
+    height: 80px; 
+  }
+
+
